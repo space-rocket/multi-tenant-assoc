@@ -1,7 +1,7 @@
 defmodule MyAppWeb.Subdomain.UserController do
   use MyAppWeb, :controller
 
-  alias MyApp.Accounts
+  alias MyApp.Subdomain.Accounts
   alias MyApp.Accounts.User
 
   def index(conn, _params) do
