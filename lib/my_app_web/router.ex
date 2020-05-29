@@ -17,6 +17,7 @@ defmodule MyAppWeb.Router do
     pipe_through :browser
 
     get "/", PageController, :index
+    resources "/users", UserController
   end
 
   # Other scopes may use custom stacks.
@@ -37,7 +38,6 @@ defmodule MyAppWeb.Router do
     scope "/" do
       pipe_through :browser
       live_dashboard "/dashboard", metrics: MyAppWeb.Telemetry
-      resources "/users", UserController
     end
   end
 end
