@@ -15,8 +15,36 @@ subdomains = [
  "site-2"
 ]
 
+assets = [
+	%{name: "asset 1 (should only display on main site)"},
+	%{name: "asset 2 (should only display on main site)"}
+]
+
+users = [
+	%{
+		username: "user 1 (should only display on main site)",
+		credential: %{
+			email: "user1@user.com"
+		}
+	},
+	%{
+		username: "user 2 (should only display on main site)",
+		credential: %{
+			email: "user2@user.com"
+		}
+	}
+]
+
 Enum.each(subdomains, fn(data) ->
 	MyApp.Tenants.new(data)
+end)
+
+Enum.each(assets, fn(data) ->
+	MyApp.Assets.create_asset(data)
+end)
+
+Enum.each(users, fn(data) ->
+	MyApp.Accounts.create_user(data)
 end)
 
 # MyApp.Tenants.new("site-1")
