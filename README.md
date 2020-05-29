@@ -1,15 +1,3 @@
 # MyApp
 
-```bash
-mix phx.gen.html Accounts User users username:string:unique
-```
-
-```bash
-mix phx.gen.context Accounts Credential credentials \
-email:string:unique \
-user_id:references:users
-```
-
-```bash
-mix phx.gen.html Assets Asset assets name:string
-```
+To use open up your `etc/hosts` file and add your subdomains. 
