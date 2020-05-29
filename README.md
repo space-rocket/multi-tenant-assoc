@@ -11,5 +11,5 @@ user_id:references:users
 ```
 
 ```bash
-mix ecto.gen.migration
+mix phx.gen.html Assets Asset assets name:string
 ```
